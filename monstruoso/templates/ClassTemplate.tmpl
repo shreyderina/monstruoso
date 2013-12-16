@@ -1,0 +1,10 @@
+class ${name}(#slurp
+    #for $ancestor in $ancestors:
+$ancestor,#slurp
+    #end for
+):
+
+#for $method in $methods:
+$method
+
+#end for

@@ -1,0 +1,5 @@
+    @property
+    def ${method}(self):
+        return ${method.capitalize()}(self.string + "http://${method}.{base_url}".format(
+            base_url=self.base_url
+        ))

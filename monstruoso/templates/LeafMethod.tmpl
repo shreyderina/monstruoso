@@ -1,0 +1,9 @@
+    ## @make_get_request
+    ## @form_request
+    def ${method}(self, *args, **kwargs):
+        ## return self.string + "{}${method}".format("/")
+        import urllib
+        params = urllib.urlencode(*args)
+        uri = self.string + "{}${method}".format('/') + "/?" + params
+        response = get_request(uri)
+        return ${method.capitalize()}Response(response)
