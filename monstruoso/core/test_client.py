@@ -1,7 +1,6 @@
-from human_curl import Response as CurlResponse
-from human_curl import get, post
-
-
 class TestClient(object):
-    def __init__(self, url):
-        self.url = url
+    base_url = None
+
+    def __init__(self):
+        if self.base_url is None:
+            raise Exception("define base_url")

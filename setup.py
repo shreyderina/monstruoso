@@ -11,5 +11,6 @@ setup(
     install_requires=[
         'human_curl',
         'nose',
+        'ujson'
     ],
 )
