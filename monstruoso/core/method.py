@@ -38,7 +38,7 @@ class Method(object):
         self._response_type = response_type
         return self
 
-    def after_response(self, checker=None):
+    def check_response(self, checker=None):
         self._response_checker = checker
         return self
 
