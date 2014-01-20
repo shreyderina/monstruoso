@@ -1,4 +1,4 @@
-from database import Postgres
+from monstruoso.databases.database import Postgres
 
 class PostgresQuery:
 
