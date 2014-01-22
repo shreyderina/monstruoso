@@ -1,7 +1,7 @@
 import psycopg2
 from pymongo import MongoClient
 
-class Database:
+class Database(object):
 
     connection = None
 
@@ -52,3 +52,13 @@ class Mongo(Database):
         db = self.connection.bss
         collection = db.all_messages
         return list(collection.find(query))
+
+class Connection(object):
+
+    def create_db_connection(self, type, host, port = None, user = None, password = None, db_name = None):
+        if type == 'postgres':
+            return Postgres(host, port, db_name, user, password)
+        if type == 'mongo':
+            return Mongo(host)
+        else:
+            pass
